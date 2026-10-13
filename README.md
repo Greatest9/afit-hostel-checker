@@ -24,7 +24,7 @@ python hostel_check.py --html-file tests\sample.html
 That prints the parsed hostels and bed counts, so you can confirm the parsers
 work before touching the real site.
 
-## Run for real, locally
+## Run for real, locally 
 
 Credentials live in `.env` (gitignored). Fill it in, then use the helper, which
 loads `.env` and runs the checker with any args you pass. Start with
