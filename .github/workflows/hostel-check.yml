@@ -1,9 +1,10 @@
 name: AFIT hostel check
 
 on:
-  schedule:
-    - cron: "4,14,24,34,44,54 * * * *"
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 concurrency:
   group: hostel-check
@@ -12,6 +13,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
